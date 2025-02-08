@@ -2,76 +2,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #f0f2f5, #dfe4ea);
+    background-color: #f0f2f5;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
 .container {
     max-width: 1000px;
-    width: 100%;
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    padding: 15px;
 }
 
 .header {
     text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
 }
 
 .header h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 2rem;
 }
 
 .search-section {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 30px;
 }
 
 input {
     width: 50%;
-    padding: 12px 20px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
     outline: none;
-    transition: all 0.3s ease;
-    font-size: 1rem;
 }
 
 input:focus {
     border-color: #3498db;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
 }
 
 button {
-    padding: 12px 24px;
+    padding: 8px 20px;
     border: none;
-    border-radius: 25px;
-    background: #3498db;
+    border-radius: 20px;
+    background-color: #3498db;
     color: white;
-    font-size: 1rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s;
 }
 
 button:hover {
-    background: #2980b9;
-    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+    background-color: #2980b9;
 }
 
 .tabs {
@@ -82,79 +68,66 @@ button:hover {
 }
 
 .tab-button {
-    background: transparent;
+    background-color: transparent;
     color: #666;
-    border-bottom: 3px solid transparent;
-    font-size: 1rem;
-    padding: 10px 16px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding: 8px 16px;
 }
 
 .tab-button.active {
+    background-color: transparent;
     color: #3498db;
-    border-bottom: 3px solid #3498db;
-    font-weight: 600;
+    border-bottom: 2px solid #3498db;
 }
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 25px;
+    padding: 10px;
 }
 
 .book-card {
-    background: white;
-    border-radius: 12px;
+    background-color: white;
+    border-radius: 10px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.2s;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .book-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .book-card img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
 }
 
 .book-info {
-    padding: 15px;
+    padding: 12px;
 }
 
 .book-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #2c3e50;
+    font-size: 0.9rem;
+    font-weight: 600;
     margin-bottom: 5px;
+    color: #1a1a1a;
 }
 
 .book-author {
-    font-size: 0.9rem;
-    color: #7f8c8d;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
 .book-card button {
     width: 100%;
-    padding: 12px;
-    background: #e74c3c;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    border-radius: 0;
     position: absolute;
     bottom: 0;
     left: 0;
-}
-
-.book-card button:hover {
-    background: #c0392b;
 }
