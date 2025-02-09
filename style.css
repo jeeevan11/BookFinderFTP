@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    background-color: #0a0a0a;
+    background: radial-gradient(circle, #000015, #01001f, #000);
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -14,15 +16,30 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Adding subtle stars effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.2;
 }
 
 .container {
     max-width: 1000px;
     width: 100%;
     padding: 20px;
-    background: #111;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    background: rgba(10, 10, 20, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 153, 255, 0.5);
+    backdrop-filter: blur(8px);
 }
 
 .header {
@@ -31,10 +48,11 @@ body {
 }
 
 .header h1 {
-    color: #ff0000;
+    color: #0ff;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #00ffff;
 }
 
 .search-section {
@@ -46,9 +64,9 @@ body {
 
 input {
     width: 60%;
-    padding: 10px 15px;
-    border: 2px solid #ff0000;
-    background: #222;
+    padding: 12px 15px;
+    border: 2px solid #0ff;
+    background: #111;
     color: #fff;
     border-radius: 25px;
     outline: none;
@@ -56,25 +74,29 @@ input {
 }
 
 input:focus {
-    border-color: #ff4444;
-    background: #333;
+    border-color: #00e6e6;
+    background: #222;
+    box-shadow: 0 0 10px #00e6e6;
 }
 
 button {
-    padding: 10px 25px;
+    padding: 12px 25px;
     border: none;
     border-radius: 25px;
-    background-color: #ff0000;
+    background: linear-gradient(90deg, #ff0000, #ff6600);
     color: white;
     cursor: pointer;
     transition: 0.3s;
     font-size: 1rem;
     font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
 }
 
 button:hover {
-    background-color: #cc0000;
-    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff6600, #ff0000);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
 }
 
 .tabs {
@@ -96,8 +118,9 @@ button:hover {
 }
 
 .tab-button.active {
-    color: #ff0000;
-    border-bottom: 3px solid #ff0000;
+    color: #0ff;
+    border-bottom: 3px solid #0ff;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .books-grid {
@@ -108,17 +131,18 @@ button:hover {
 }
 
 .book-card {
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #111, #222);
     border-radius: 15px;
     overflow: hidden;
     transition: 0.3s;
     position: relative;
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 153, 255, 0.3);
+    transform: scale(1);
 }
 
 .book-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 153, 255, 0.6);
 }
 
 .book-card img {
@@ -136,7 +160,8 @@ button:hover {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 5px;
-    color: #ff4444;
+    color: #0ff;
+    text-shadow: 0 0 5px #00ffff;
 }
 
 .book-author {
@@ -148,7 +173,7 @@ button:hover {
 .book-card button {
     width: 100%;
     border-radius: 0;
-    background: #ff0000;
+    background: linear-gradient(90deg, #ff0000, #ff6600);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -160,5 +185,6 @@ button:hover {
 }
 
 .book-card button:hover {
-    background-color: #cc0000;
+    background: linear-gradient(90deg, #ff6600, #ff0000);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
 }
